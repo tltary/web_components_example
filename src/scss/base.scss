@@ -1,0 +1,218 @@
+@import "components/destyle";
+@import "components/bootstrap/bootstrap-grid";
+
+@mixin font-face($font-family, $url, $weight: 400, $style: normal) {
+	@font-face {
+		font-family: '#{$font-family}';
+		src: url('#{$url}.eot');
+		src: url('#{$url}.eot?#iefix') format('embedded-opentype'),
+		     url('#{$url}.woff') format('woff'),
+		     url('#{$url}.ttf') format('truetype');
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+/* -------------------  /Снипеты  ------------------- */
+
+body {
+	font-family: 'arial';
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	letter-spacing: -0.5px;
+	padding-top: 85px;
+}
+
+
+
+$gray: #e3e3e3;
+$black: #000;
+
+.form {
+	&__block {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0px;
+		}
+		label {
+			display: inline-block;
+			width: 100%;
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+		input {
+			padding: 10px 20px;
+			width: 100%;
+			border: 1px $gray solid;
+			font-size: 16px;
+			border-radius: 5px;
+		}
+		.btn {
+			padding: 10px 20px;
+			border-radius: 5px;
+			background-color: $gray;
+			border: 1px $gray solid;
+			color: #000;
+			transition: color .3s ease-in-out, background-color .3s ease-in-out, border .3s ease-in-out;
+			&:hover {
+				background-color: darken($gray, 50%);
+				border: 1px darken($gray, 50%) solid;
+				color: #fff;
+			}
+			&--outline {
+				background: transparent;
+			}
+		}
+	}
+
+}
+
+.footer {
+	background-color: $gray;
+	padding: 70px 0px;
+	&__logo {
+		max-width: 180px;
+		path {
+			fill: $black;
+		}
+	}
+	&__flex {
+		display: flex;
+	    align-items: center;
+	    height: 100%;
+	}
+	&__content {
+		text-align: right;
+		width: 100%;
+	}
+	&__item {
+		display: inline-block;
+		margin: 0px 15px;
+		a {
+			cursor: pointer;
+			color: $black;
+		}
+	}
+}
+
+.menu {
+	padding: 20px 0px;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: $gray;
+	z-index: 10;
+	&__logo {
+		max-width: 180px;
+		path {
+			fill: $black;
+		}
+	}
+	&__flex {
+		display: flex;
+	    align-items: center;
+	    height: 100%;
+	}
+	&__content {
+		text-align: right;
+		width: 100%;
+	}
+	&__item {
+		display: inline-block;
+		margin: 0px 15px;
+		a {
+			cursor: pointer;
+			color: $black;
+		}
+	}
+}
+
+.img {
+	width: 100%;
+	&--empty {
+		background-color: $gray;
+		border: none;
+	}
+}
+
+.card {
+	border: 1px $gray solid;
+	border-radius: 5px;
+	margin-bottom: 30px;
+	&__title {
+
+	}
+	&__content {
+		padding: 15px;
+	}
+	&__title {
+		margin-bottom: 15px;
+		font: {
+			weight: bold;
+			size: 24px;
+		}
+	}
+	&__text {
+		font-size: 16px;
+	}
+}
+
+.title {
+	color: $black;
+	font: {
+		weight: bold;
+		size: 48px;
+	}
+	margin-bottom: 25px;
+}
+
+.annotation {
+	color: $black;
+	font: {
+		size: 14px;
+	}
+	margin-bottom: 10px;
+}
+
+.text {
+	color: $black;
+	font: {
+		size: 18px;
+	}
+	margin-bottom: 15px;
+}
+
+.section {
+	padding: 50px 0px;
+}
+
+@include media-breakpoint-down(xs) {
+	body {
+		padding-top: 15px;
+	}
+	.menu {
+		&__flex {
+			display: none;
+		}
+		&__item {
+
+		}
+	}
+	.footer {
+		&__logo {
+			text-align: center;
+		}
+		&__content {
+			text-align: center;
+		}
+		&__item {
+			display: block;
+		    margin: 0px 0px 15px 0px;
+		    &:last-child {
+		    	margin: 0px;
+		    }
+		}
+	}
+}

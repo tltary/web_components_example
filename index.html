@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>web</title>
+    <link href="dist/main.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <pb-menu data-class="menu menu--black">
+      <item data-url="#">Какие вещи принимаем?</item>
+      <item>Как это работает?</item>
+      <item data-url="#">Вопросы</item>
+    </pb-menu>
+
+    <pb-section>
+      <pb-row>
+        <pb-col data-col="6">
+          <pb-title>тест тайтл</pb-title>
+          <pb-annotation>тест аннотация</pb-annotation>
+          <pb-text>тест текст</pb-text>
+        </pb-col>
+        <pb-col data-col="6">
+          <pb-img data-url="https://bipbap.ru/wp-content/uploads/2017/04/000f_7290754.jpg"></pb-img>
+        </pb-col>
+      </pb-row>
+    </pb-section>
+
+    <pb-section>
+      <pb-row>
+        <pb-col data-col="3">
+          <pb-card data-title="Заполененый тайтл" data-text="" data-img=""></pb-card>
+        </pb-col>
+        <pb-col data-col="3">
+          <pb-card data-text="Заполененый текст" data-img=""></pb-card>
+        </pb-col>
+        <pb-col data-col="3">
+          <pb-card data-title="Заполененый тайтл" data-text="Заполененый текст" data-img="https://bipbap.ru/wp-content/uploads/2017/04/000f_7290754.jpg"></pb-card>
+        </pb-col>
+        <pb-col data-col="3">
+          <pb-card></pb-card>
+        </pb-col>
+        <pb-col data-col="4">
+          <pb-card></pb-card>
+        </pb-col>
+        <pb-col data-col="8">
+          <pb-card></pb-card>
+        </pb-col>
+      </pb-row>
+    </pb-section>
+
+    <pb-section-row>
+      <pb-col data-col="4">
+        <pb-form-block>
+          <pb-label>login</pb-label>
+          <pb-input data-type="text"></pb-input>
+        </pb-form-block>
+        <pb-form-block>
+          <pb-label>password</pb-label>
+          <pb-input data-type="password"></pb-input>
+        </pb-form-block>
+        <pb-form-block>
+          <pb-button data-type="outline">
+            зарегистрируйся
+          </pb-button>
+        </pb-form-block>
+      </pb-col>
+      <pb-col data-col="8">
+        <pb-img data-url="https://bipbap.ru/wp-content/uploads/2017/04/000f_7290754.jpg"></pb-img>
+      </pb-col>
+    </pb-section-row>
+
+    <pb-footer data-class="footer">
+      <item data-url="#">Какие вещи принимаем?</item>
+      <item>Как это работает?</item>
+      <item data-url="#">Вопросы</item>
+    </pb-footer>
+
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
